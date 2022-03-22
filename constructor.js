@@ -37,3 +37,4 @@
 // console.log(자식.name)
 
 // 상속기능 구현 1. constuctor 2. Object.create(물려받을 부모 object)
+
