@@ -29,14 +29,14 @@
 
 //2. 
 
-let 프로미스 = new Promise( (성공,실패)=>{
-    fetch('https://codingapple1.github.io/hello.txt')
-    .then( res=> res.json())
-    .then( res => {
-        성공(res)
-    })
-})
+// let 프로미스 = new Promise( (성공,실패)=>{
+//     fetch('https://codingapple1.github.io/hello.txt')
+//     .then( res=> res.json())
+//     .then( res => {
+//         성공(res)
+//     })
+// })
 
-프로미스.then(function(res){
-    console.log(res)
-})
+// 프로미스.then(function(res){
+//     console.log(res)
+// })
