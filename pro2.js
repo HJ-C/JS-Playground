@@ -1,8 +1,8 @@
 // 1.
-// let a = [1,2,3]
-// let b = '김밥'
-// let c = [...b, ...a]
-// console.log(c)
+let a = [1,2,3]
+let b = '김밥'
+let c = [...b, ...a]
+console.log(c)
 // // ["김","밥",1,2,3]
 
 // 2. 
