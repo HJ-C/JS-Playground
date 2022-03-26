@@ -1,3 +1,5 @@
+// object는 reference type(화살표)라 그냥 복사하면 안된다 = constructor를 사용하자
+
 // 1. 변수에 함수 추가
 // var 학생1 = {
 //     name : "Kim",
