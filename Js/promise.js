@@ -41,38 +41,10 @@ var 프로미스 = new Promise(function(성공,실패){
 // 자바스크립트는 평시엔 동기적으로 실행되며 실행을 지원하는 특수한 함수들 덕분에 가끔 비동기적 실행이 될 뿐
 
 
-// 4. Promise 활용 1
+// 4. Promise 활용 2
 // <img> 이미지 로딩 성공시 특정 코드를 실행
 // 이미지가 로드 되면 콘솔창에 성공,로드가 실패하면 콘솔창에 실패 출력
 
-
-var Def = new Promise(function(성공,실패){
-    var Img = document.getElementById('test').addEventListener('load',function(){
-        성공(Img)
-    })
-})
-Def.then(function(){
-    console.log('성공')
-}).catch(function(){
-    console.log('실패')
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 1. 
 let 이미지로딩 = new Promise(function(성공,실패){
     let img = document.querySelector('#test')
     img.addEventListener('load', function(){
@@ -89,15 +61,19 @@ let 이미지로딩 = new Promise(function(성공,실패){
     console.log('실패')
 })
 
-//2. 
-let 프로미스 = new Promise( (성공,실패)=>{
+
+//5. Promise 활용 3
+// Ajax 요청이 성공하면 무언가 코드를 실행하고 싶음
+var 프로미스 = new Promise(function(성공,실패){
     fetch('https://codingapple1.github.io/hello.txt')
-    .then( res=> res.json())
+    .then()
     .then( res => {
-        성공(res)
+        return 성공(res)
     })
 })
-
-프로미스.then(function(res){
-    console.log(res)
+프로미스.then(function(){
+    console.log('성공')
+}).catch(function(){
+    console.log('실패')
 })
+
